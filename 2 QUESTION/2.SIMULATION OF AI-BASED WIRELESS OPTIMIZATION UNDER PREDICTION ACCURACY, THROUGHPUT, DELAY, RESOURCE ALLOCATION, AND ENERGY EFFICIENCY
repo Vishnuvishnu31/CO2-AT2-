@@ -1,1 +1,49 @@
-
+clc;
+clear;
+close all;
+users = 20:20:100;
+accuracy = zeros(size(users));
+throughput = zeros(size(users));
+delay = zeros(size(users));
+resource = zeros(size(users));
+energy = zeros(size(users));
+for i=1:length(users)
+n = users(i);
+accuracy(i)=90+rand()*8;
+throughput(i)=120+8*n+rand()*20;
+delay(i)=25-0.08*n+rand();
+resource(i)=65+0.25*n+rand();
+energy(i)=45+0.18*n+rand();
+end
+T = table(users',accuracy',throughput',delay',resource',energy',...
+'VariableNames',{'Users','Accuracy','Throughput','Delay','ResourceAllocation','EnergyEfficiency'})
+figure
+plot(users,accuracy,'-o','LineWidth',2)
+grid on
+xlabel('Users')
+ylabel('Prediction Accuracy (%)')
+title('Users vs Prediction Accuracy')
+figure
+plot(users,throughput,'-s','LineWidth',2)
+grid on
+xlabel('Users')
+ylabel('Throughput (Mbps)')
+title('Users vs Throughput')
+figure
+plot(users,delay,'-*','LineWidth',2)
+grid on
+xlabel('Users')
+ylabel('Delay (ms)')
+title('Users vs Delay')
+figure
+plot(users,resource,'-d','LineWidth',2)
+grid on
+xlabel('Users')
+ylabel('Resource Allocation (%)')
+title('Users vs Resource Allocation')
+figure
+plot(users,energy,'-^','LineWidth',2)
+grid on
+xlabel('Users')
+ylabel('Energy Efficiency')
+title('Users vs Energy Efficiency')
