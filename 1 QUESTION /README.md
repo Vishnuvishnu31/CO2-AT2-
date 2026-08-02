@@ -18,3 +18,10 @@ Output
 <img width="728" height="500" alt="Screenshot 2026-08-02 181027" src="https://github.com/user-attachments/assets/c3905af9-fdbe-425c-8681-3973017a4924" />
 <img width="711" height="475" alt="Screenshot 2026-08-02 181002" src="https://github.com/user-attachments/assets/f7fe5db0-ff80-40ea-a80d-4f4716fdfe73" />
 
+
+Conclusion
+
+
+The MATLAB simulation demonstrates that the performance of a Smart City IoT network is significantly affected by the number of sensor nodes. As the sensor count increases, network traffic becomes heavier, resulting in increased end-to-end delay and bandwidth utilization. Packet Delivery Ratio decreases slightly due to congestion and packet loss, while throughput increases because more data is transmitted. These results show that careful planning of sensor deployment, routing strategies, and bandwidth allocation is essential for building an efficient and reliable Smart City IoT network. MATLAB proves to be an effective tool for analyzing network behavior before real-world implementation.
+
+
