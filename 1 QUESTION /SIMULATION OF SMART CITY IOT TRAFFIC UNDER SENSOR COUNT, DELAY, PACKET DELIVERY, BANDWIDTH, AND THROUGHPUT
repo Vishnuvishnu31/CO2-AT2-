@@ -1,52 +1,38 @@
 clc;
 clear;
 close all;
-
 sensorCount = 20:20:100;
-
 delay = zeros(size(sensorCount));
 pdr = zeros(size(sensorCount));
 throughput = zeros(size(sensorCount));
 bandwidth = zeros(size(sensorCount));
-
 for i = 1:length(sensorCount)
-
-    n = sensorCount(i);
-
-    delay(i) = 10 + (0.4*n) + rand()*2;
-
-    pdr(i) = 100 - (0.08*n) + rand();
-
-    throughput(i) = 150 + (7*n) + rand()*20;
-
-    bandwidth(i) = 30 + (0.6*n) + rand()*2;
-
+n = sensorCount(i);
+delay(i) = 10 + (0.4*n) + rand()*2;
+pdr(i) = 100 - (0.08*n) + rand();
+throughput(i) = 150 + (7*n) + rand()*20;
+bandwidth(i) = 30 + (0.6*n) + rand()*2;
 end
-
 disp(table(sensorCount',delay',pdr',throughput',bandwidth',...
 'VariableNames',{'Sensors','Delay','PDR','Throughput','Bandwidth'}));
-
 figure
 plot(sensorCount,delay,'-o','LineWidth',2)
 grid on
 xlabel('Sensor Count')
 ylabel('Delay (ms)')
 title('Sensor Count vs Delay')
-
 figure
 plot(sensorCount,pdr,'-s','LineWidth',2)
 grid on
 xlabel('Sensor Count')
 ylabel('Packet Delivery Ratio (%)')
 title('Sensor Count vs PDR')
-
 figure
 plot(sensorCount,throughput,'-*','LineWidth',2)
 grid on
 xlabel('Sensor Count')
 ylabel('Throughput (kbps)')
 title('Sensor Count vs Throughput')
-
 figure
 plot(sensorCount,bandwidth,'-d','LineWidth',2)
 grid on
