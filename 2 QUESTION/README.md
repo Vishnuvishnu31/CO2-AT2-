@@ -19,3 +19,10 @@ Output
 <img width="738" height="467" alt="Screenshot 2026-08-02 183237" src="https://github.com/user-attachments/assets/1a575b36-e6eb-42bc-9a08-457dcebf23ef" />
 <img width="727" height="473" alt="Screenshot 2026-08-02 183146" src="https://github.com/user-attachments/assets/69f639ac-19ef-44c3-adb0-d2a2d726e6f2" />
 
+
+Conclusion
+
+
+The MATLAB simulation demonstrates that AI-based wireless optimization significantly enhances wireless communication performance. By intelligently predicting traffic demand and allocating resources, AI improves prediction accuracy, increases throughput, reduces delay, optimizes resource utilization, and enhances energy efficiency. These improvements make AI-based optimization highly suitable for next-generation wireless networks such as 5G, 6G, IoT, and smart city applications.
+
+
